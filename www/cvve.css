@@ -1,0 +1,64 @@
+#wrap {
+	background: #fff;
+	
+	border: 1px solid #fff;
+	position: relative;
+	text-align: left;
+	
+	margin: 60px auto;
+	max-width: 550px;
+	padding: 20px;
+	border: 1px dotted silver;
+}
+
+
+#mobilesubmit, #mobile_remember_username, #mobile_remember_me {
+	display: none;
+}
+
+@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+	#regularsubmit, #regular_remember_username, #regular_remember_me {
+		display: none;
+	}
+	#wrap {
+		margin: 0;
+		border: none;
+		padding: 0;
+	}
+	input[type="text"], input[type="password"] {
+		height: 1.5em;
+		font-size: 1em;
+	}
+	#mobilesubmit, #mobile_remember_username, #mobile_remember_me {
+		display: table-row;
+	}
+}
+
+.btn, .btnaddonright {
+	color: #000000;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	background-color: #eee;
+	background-image: linear-gradient(#fcfcfc, #eee);
+	text-align: center;
+	padding: 5px;
+	cursor: hand;
+}
+
+.btn:hover, .btnaddonright:hover {
+	border-color: #ccc;
+	background-color: #ddd;
+	background-image: linear-gradient(#eee, #ddd);
+
+}
+
+.btn img,
+.btnaddonright img {
+	max-height: 15px;
+	max-width: 15px;
+}
+
+#regularsubmit .btn,
+#mobilesubmit .btn {
+	width: 100%;
+}
